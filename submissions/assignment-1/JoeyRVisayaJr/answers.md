@@ -1,0 +1,8 @@
+ANSWER_1: The Course Materials Portal stopped working after a configuration change because it could not read portal.conf, or in simpler terms, the configuration file due to a permission error.
+ANSWER_2: The course-portal account cannot read /etc/course-portal/portal.conf because the file has -rw------- permissions, which is octal 600. This gives the owner which is root, read and write permissions, while the course-portal group and others have no permissions. Since course-portal is not the owner of the file and has --- permissions, Linux blocks it from reading the file.
+ANSWER_3: 640
+ANSWER_3_WHY: 400 is wrong because it only gives root read access and gives the group no access, so course-portal still cannot read the file 755 gives the group and other users more access than they actually need, including execute permission that is not needed for a configuration file. 777 gives everyone complete access to the file, including read, write, and execute permissions, which makes it possible for any user or program to change it and cause security problems.
+ANSWER_4_ORDER: B, G, E, D, F, A, I, C, H
+ANSWER_5: Using chmod 777 is dangerous because it gives every user full access to the file. This just means that any user or program could view sensitive data and make unwanted changes to the configuration that will areally affect how the portal works. 
+ANSWER_6: A successful HTTP 200 OK response received when testing the web server with curl, along with new log entries in /var/log/course-portal/app.log confirming a clean startup without permission errors.
+ANSWER_7_BRIDGE: component=configuration management, detect=automated health check monitoring, recover=automated configuration rollback, proof=successful HTTP 200 client responses
