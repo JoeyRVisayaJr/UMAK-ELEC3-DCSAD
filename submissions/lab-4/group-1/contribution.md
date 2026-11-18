@@ -8,4 +8,4 @@
 | Step 4. HTTP API | Jhonemarss | Jhonemarss, jeanleee29 | Jhonemarss, jeanleee29 |
 | Steps 5 to 7. curl and browser | Jhonemarss | Jhonemarss, jeanleee29 | Jhonemarss, jeanleee29 |
 | Step 8. Table items | Jhonemarss | Jhonemarss, jeanleee29 | Jhonemarss, jeanleee29 |
-| Questions | Jhonemarss | Jhonemarss, jeanleee29 | Jhonemarss, jeanleee29 |
+| Questions | jeanleee29 | jeanleee29 | jeanleee29 |
