@@ -28,5 +28,5 @@
 | GitHub username | What this groupmate did |
 | --- | --- |
 | jhonemarss | Configured the S3 website hosting, bucket policy, and public access settings; verified the website endpoint and prepared the submission screenshots and GitHub files. |
-| <answer> | Assisted in developing and customizing the Group 1 Linktree webpage, including the group member information, profile links, and page content for Seatwork 3. |
+| jeanleee29 | Assisted in developing and customizing the Group 1 Linktree webpage, including the group member information, profile links, and page content for Seatwork 3. |
 
