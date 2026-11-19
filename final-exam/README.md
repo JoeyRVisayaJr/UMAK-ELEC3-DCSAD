@@ -7,7 +7,7 @@ You take the Final Exam with your thesis group, in one of two tracks. This page 
 | Section | Track B written exam, Saturday, November 21 | Presentation night, 7:00 to 9:00 PM | Written exam make-up, Saturday, November 28 |
 | --- | --- | --- | --- |
 | IV-ACSAD | Start 7:30 to 7:45 AM, closes 9:30 AM | Thursday, November 26 | Start 7:30 to 7:45 AM, closes 9:30 AM |
-| IV-BCSAD | Start 10:30 to 10:45 AM, closes 12:30 PM | Wednesday, November 25 | Start 10:30 to 10:45 AM, closes 12:30 PM |
+| IV-BCSAD | Start 3:00 to 3:15 PM, closes 5:00 PM | Wednesday, November 25 | Start 10:30 to 10:45 AM, closes 12:30 PM |
 | IV-CCSAD | Start 6:00 to 6:15 PM, closes 8:00 PM | Tuesday, November 24 | Start 6:00 to 6:15 PM, closes 8:00 PM |
 | IV-DCSAD | Start 3:00 to 3:15 PM, closes 5:00 PM | Monday, November 23 | Start 3:00 to 3:15 PM, closes 5:00 PM |
 
@@ -33,7 +33,7 @@ Your whole thesis group takes the same track. Your group representative answers 
 ## Track B steps
 
 1. By Thursday, November 19, 11:59 PM: your group representative signs in to Cumulus, our custom app, at https://main.dvexpdxf4xcm3.amplifyapp.com/roll/ and rolls your case number once. Then your representative answers the track form. The form asks for the number you rolled and a screenshot of the roll. Have the student ID of each groupmate ready, because the roll asks for every member (2 to 8 in all). If you cannot sign in, or Cumulus refuses your list, message me before 9:00 PM. The track form shows each step with pictures.
-2. Within 30 minutes after your representative sends the form: every member gets the case by UMak email. I send your group's AWS lab user to your representative the same night. You can use your own AWS account instead. Then its costs are yours, and the lab user rules below do not apply.
+2. Within 30 minutes after your representative sends the form: every member gets the case by UMak email. Within an hour after your roll, your group's lab user from our labs, for example `dcsad-g07`, gets the final exam access. Sign in with the same user name and password as in the labs. You can use your own AWS account instead. Then its costs are yours, and the lab user rules below do not apply.
 3. Write and test your app on your laptop first, and keep the code in one Git repository for your group. Then build your case in AWS. You can use the services below. You do not need all of them. Your build must meet your case: what the app must do, the expected traffic, and the constraints. Your case email suggests a design, and you can change it.
    - VPC: your group's public and private subnets in the section VPC
    - EC2: t3.micro, t3.small, or t3.medium instances in your subnet, with your group's own security group
@@ -41,7 +41,7 @@ Your whole thesis group takes the same track. Your group representative answers 
    - API Gateway, Lambda, and DynamoDB: the back end
    - IAM: your group has two ready roles, `umak-elec3-<user>-lambda-role` for your Lambda functions and `umak-elec3-<user>-ec2-role` for your instances. Each can use your own tables, buckets, and Lambda logs. Your lab user cannot change them. If you use Lambda, be ready to explain in the defense what your role allows and how you would narrow it to least privilege.
 
-   Your lab user can do everything with your group's own resources. Use these names, or AWS refuses the action. `<user>` is your lab user name, for example `dcsad-final-07`.
+   Your lab user can do everything with your group's own resources. Use these names, or AWS refuses the action. `<user>` is your lab user name, for example `dcsad-g07`.
    - Tag your security group, your launch template, your key pair, and your instance with `team` = `<user>`. Put the tag on the launch template itself and on the instances that it launches.
    - Start each Lambda function, table, and bucket name with `umak-elec3-<user>-`. Your HTTP API, `umak-elec3-<user>-api`, is already made. You add its routes.
    - To let an instance read your bucket or table, choose `umak-elec3-<user>-ec2-role` as its IAM instance profile.
@@ -82,7 +82,15 @@ The example diagrams were drawn in draw.io (https://app.diagrams.net) with its A
 | 2. Architecture diagram | Your system on its provider, the network, numbered arrows for one request, the CI/CD path, a legend | The services you chose, each in the right place: anything that runs in a VPC in your subnet of the section VPC (or in your own VPC, in your own account), the other services outside it. Numbered arrows for one request, a legend |
 | 3. Plan | One paragraph on what your system does and what runs on the cloud. The monthly cost with the calculator link | One row per service: the service and what it does in your case. The monthly cost with the AWS Pricing Calculator link. In 2 or 3 sentences, what breaks at ten times the users, and the fix |
 
-- Submit it in the "Final Exam Submission" form by Sunday, November 22, 6:00 PM. I post the link in our group chat.
+- Your group representative submits it once for the whole group, in the "Final Exam Submission" form of your section, by Sunday, November 22, 6:00 PM. Sign in with your UMak account. You can replace the file until the deadline.
+
+  | Section | Final Exam Submission form |
+  | --- | --- |
+  | IV-ACSAD | https://forms.gle/K4ChGMCXkuuZYBCc6 |
+  | IV-BCSAD | https://forms.gle/TUBDCynfoC1CnNPEA |
+  | IV-CCSAD | https://forms.gle/8Jo1k1uWeyAfgExH7 |
+  | IV-DCSAD | https://forms.gle/6C5HdDBeWKWzNk9YA |
+
 - Name the file `SECTION-TRACK-GROUP.pdf`, for example `DCSAD-B-07.pdf`. The file is at most 10 MB.
 - I score every PDF before the presentation nights.
 
@@ -253,7 +261,7 @@ A make-up is only for a documented reason, for example a medical certificate. It
 Test both before 7:00 PM, and keep a phone ready to join. If you drop, rejoin within your slot. If you cannot, you answer at the end of the night if time allows. A member with the camera off gets 0 on the individual defense.
 
 **Which AWS account do we use, and how do we sign in?**
-I send your group's lab user in the class AWS account (the sign-in link, the user name, and the password) to your representative on the night of your case email. You can use your own AWS account instead. Track A uses your own cloud provider.
+Use your group's lab user from our labs, for example `dcsad-g07`, with the same sign-in link, user name, and password. Within an hour after your case roll, it gets the final exam access. If your group lost the password, message me. You can use your own AWS account instead. Track A uses your own cloud provider.
 
 **Do we pay for AWS?**
 Not in the class account. In your own account, the costs are yours, so stop or delete what you do not use.
