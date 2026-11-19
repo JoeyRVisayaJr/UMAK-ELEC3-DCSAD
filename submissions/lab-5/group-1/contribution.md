@@ -8,5 +8,5 @@ Write GitHub usernames, not full names.
 | Steps 2 and 3. Guestbook and upload | jhonemarss | jhonemarss | jeanleee29 |
 | Step 4. CORS settings | jhonemarss | jhonemarss | jeanleee29 |
 | Steps 5 and 6. Throttle and test | jhonemarss | jhonemarss | jeanleee29 |
-| Step 7. Demo | N/A | N/A | N/A |
+| Step 7. Demo | jhonemarss | jhonemarss | jeanleee29 |
 | Questions | jeanleee29 | jeanleee29 | jeanleee29 |
